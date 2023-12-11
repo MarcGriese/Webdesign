@@ -1,0 +1,165 @@
+{
+    "songs": [
+        {
+            "songName": "Dancing With A Ghost",
+            "songText": "SNAKEHIPS' latest single, \"Dancing With A Ghost\", featuring the mesmerizing vocals of Spanish-born, German artist Au/Ra, is a dance-inspired gem that captivates from start to finish. With Au/Ra's compelling voice taking the spotlight and the vibrant electronic beats seamlessly blending in, the track thrives in just two and a half minutes. Crafted during a lively studio session in LA, this song embodies playful synths, energetic bass, and glitchy elements, perfectly complementing Au/Ra's pure tones. It's a must-listen collaborative effort that elevates the intensity with its infectious groove.",
+            "songImage": "dancing-with-a-ghost.jpg",
+            "songURL": "https://open.spotify.com/track/59l9ToPcTNhaoJRaSnH5Jc?si=9fdab24d48264718",
+            "release_date": "5th October 2023"
+        },
+        {
+            "songName": "Highs And Lows",
+            "songText": "Discover the ultimate collaboration in \"Highs And Lows\" by ATB, Au/Ra, and York! This progressive house anthem fuses ATB's iconic sound with Au/Ra's mesmerizing vocals and York's dancefloor expertise. Join the musical journey and experience this electrifying track that sets the stage for ATB's next big project!",
+            "songImage": "highs-and-lows.jpg",
+            "songURL": "https://open.spotify.com/track/5ahreMEX9oBKkDlv6pWWlE?si=54505f8ab62e44dc",
+            "release_date": "3rd March 2023"
+        },
+        {
+            "songName": "Worlds On Fire",
+            "songText": "",
+            "songImage": "worlds-on-fire.jpg",
+            "songURL": "https://open.spotify.com/track/7grzdNt3eQRiBC70GksRp1?si=ed42aa6fc0d94c5a",
+            "release_date": "15th July 2022"
+        },
+        {
+            "songName": "Last Cigarette",
+            "songText": "",
+            "songImage": "last-cigarette.jpg",
+            "songURL": "https://open.spotify.com/track/0w1Brldcbo0GJDmuQHReKA?si=f249f714c47e4001",
+            "release_date": "6th May 2022"
+        },
+        {
+            "songName": "Nice to Meet Me",
+            "songText": "",
+            "songImage": "nice-to-meet-me.jpg",
+            "songURL": "https://open.spotify.com/track/62GuxZfDmTAnheXJqpbTVl?si=acbdd5e7febf4874",
+            "release_date": "8th April 2022"
+        },
+        {
+            "songName": "Side Effect",
+            "songText": "",
+            "songImage": "side-effect.jpg",
+            "songURL": "https://open.spotify.com/track/4op0sQ8BfzRsW4gGGlR7TU?si=a5e4415b5a704c00",
+            "release_date": "4th February 2022"
+        },
+        {
+            "songName": "plz don't waste my youth",
+            "songText": "",
+            "songImage": "plz-dont-waste-my-youth.jpeg",
+            "songURL": "https://open.spotify.com/track/3acJw53672cWOK1kZSLM7X?si=5f308e646cc54b9a",
+            "release_date": "21st January 2022"
+        },
+        {
+            "songName": "frozen halos",
+            "songText": "",
+            "songImage": "frozen-halos.jpg",
+            "songURL": "https://open.spotify.com/track/1WkBmjGix4TFeAOoWzJLjD?si=60f3611636164d17",
+            "release_date": "1st December 2021"
+        },
+        {
+            "songName": "Golden Hour",
+            "songText": "",
+            "songImage": "golden-hour.jpg",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "17th September 2021"
+        },
+        {
+            "songName": "Soundtrack To An Existential Crisis",
+            "songText": "",
+            "songImage": "staec.webp",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "27th August 2021"
+        },
+        {
+            "songName": "Screw Feelings",
+            "songText": "",
+            "songImage": "screw-feelings.jpg",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "30th July 2021"
+        },
+        {
+            "songName": "Bite Marks",
+            "songText": "",
+            "songImage": "bite-marks.jpg",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "14th May 2021"
+        },
+        {
+            "songName": "Dead Girl!",
+            "songText": "",
+            "songImage": "dead-girl.jpg",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "5th March 2021"
+        },
+        {
+            "songName": "Moon River",
+            "songText": "",
+            "songImage": "moon-river.jpg",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "3rd December 2020"
+        },
+        {
+            "songName": "I Miss U",
+            "songText": "",
+            "songImage": "i-miss-u.jpg",
+            "songURL": "https://open.spotify.com/track/6dXlrY4jHHJgn5ut03fbb9?si=ca8fac6ef44b4c76",
+            "release_date": "9th October 2020"
+        },
+        {
+            "songName": "Ideas",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "ideas.jpg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "10th April 2020"
+        },
+        {
+            "songName": "Ghost",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "ghost.jpeg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "7th November 2019"
+        },
+        {
+            "songName": "Stay Happy",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "stay-happy.jpeg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "13th September 2019"
+        },
+        {
+            "songName": "Dance In The Dark",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "ditd.jpg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "5th July 2019"
+        },
+        {
+            "songName": "Medicine",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "medicine.jpg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "5th July 2019"
+        },
+        {
+            "songName": "Assassin",
+            "songText": "Writing “Assassin” was a self realization. I originally wrote it about someone else, until I realized that it was something I do all the time as well. We all have those moments where we let our dark side take over, where we self-sabotage. It’s so human. So! Not to get too dark – we can get out of that sabotage cycle every time we acknowledge it’s happening. Things do get better, but only if u do something about it.",
+            "songImage": "assassin.jpg",
+            "songURL": "https://open.spotify.com/track/1VYruNWR6k3fKQL5LXtIIK?si=7d5209a4df8c426d",
+            "release_date": "19th April 2019"
+        },
+        {
+            "songName": "Y Games EP",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "x-games-ep.jpg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "19th October 2018"
+        },
+        {
+            "songName": "Emoji",
+            "songText": "Ideas was released on 04/10/2020 and produced by Andrew Frampton and Max Farrar.",
+            "songImage": "emoji.jpg",
+            "songURL": "https://open.spotify.com/track/4sR6DaImxZ6XNgRXgTTOQ3?si=ec1c333531424111",
+            "release_date": "20th September 2018"
+        }        
+    ]
+}

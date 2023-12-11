@@ -1,0 +1,224 @@
+.image_container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.45);
+    /* Hier wird das Bild herausgezoomt */
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    /* Bild anpassen, um den verfügbaren Platz auszufüllen */
+  }
+}
+
+.listen_button {
+  position: absolute;
+  top: 68%;
+  border: 1px solid white;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  height: 10vh;
+  width: 50%;
+}
+
+.listen_button:hover {
+  background-color: #023934;
+}
+
+.much {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 140px;
+  height: 68px;
+  margin-left: -70px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  }
+}
+
+
+.btn-21 {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 20pt;
+  min-width: 30%;
+  height: 10vh;
+  position: absolute;
+  top: 68%;
+  color: white;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0px;
+  background: transparent;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.btn-21:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, white);
+  animation: btn-21-right 2s linear infinite;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-21:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, white);
+  animation: btn-21-bottom 2s linear infinite;
+  animation-delay: 1s;
+  transform: translateY(-100%);
+}
+
+.btn-21 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center; /* Zentriert den Text horizontal */
+  align-items: center; /* Zentriert den Text vertikal */
+}
+
+.btn-21 span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, white);
+  animation: btn-21-left 2s linear infinite;
+}
+
+.btn-21 span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, white);
+  animation: btn-21-top 2s linear infinite;
+  animation-delay: 1s;
+  transform: translateY(-100%);
+}
+
+.btn-21:hover:before {
+  background: linear-gradient(to right, transparent, #38B78B);
+}
+
+.btn-21:hover:after {
+  background: linear-gradient(to bottom, transparent, #38B78B);
+}
+
+.btn-21 span:hover:before {
+  background: linear-gradient(to top, transparent, #38B78B);
+}
+
+.btn-21 span:hover:after {
+  background: linear-gradient(to left, transparent, #38B78B);
+}
+
+.btn-21:hover {
+  color: #38B78B;
+}
+
+.btn-21:active:before {
+  background: linear-gradient(to right, transparent, #38B78B);
+}
+
+.btn-21:active:after {
+  background: linear-gradient(to bottom, transparent, #38B78B);
+}
+
+.btn-21 span:active:before {
+  background: linear-gradient(to top, transparent, #38B78B);
+}
+
+.btn-21 span:active:after {
+  background: linear-gradient(to left, transparent, #38B78B);
+}
+
+.btn-21:active {
+  color: #38B78B;
+}
+
+@keyframes btn-21-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+@keyframes btn-21-top {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+
+}
+
+@keyframes btn-21-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+@keyframes btn-21-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+
+}
+
+.btn-21:focus {
+  outline: none
+}
