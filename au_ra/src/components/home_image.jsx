@@ -7,7 +7,7 @@ export default function HomeImage() {
         <>
             <div className="image_container">
                 <img src={image} alt="" />
-                <a href="https://open.spotify.com/artist/1eMmoIprPDWeFdB1FxU6ZV?si=B5cFd_T2TgaVTgP9LeRfUQ" target="_blank" class="btn-21">
+                <a href="https://open.spotify.com/artist/1eMmoIprPDWeFdB1FxU6ZV?si=B5cFd_T2TgaVTgP9LeRfUQ" target="_blank" className="btn-21">
                     <span>Listen Now</span>
                 </a>
             </div>
