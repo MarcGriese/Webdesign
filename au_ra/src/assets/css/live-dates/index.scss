@@ -1,0 +1,22 @@
+.live-dates--container {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #03061c;
+    padding: 3%;
+}
+
+.live-dates-header--container {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-dates-information--container {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+}
