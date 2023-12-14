@@ -8,6 +8,7 @@ import ImageBarrier from "../../components/image_barrier";
 import AuRaImage1 from "../../assets/images/aura4.jpeg"
 import AllReleases from "../../components/all-releases";
 import LiveDates from "../../components/live-dates";
+import Feedback from "../../components/fan-feedback";
 
 
 
@@ -22,6 +23,8 @@ export default function Home() {
             <AllReleases/>
             <ImageBarrier imgData={AuRaImage1} heading="LIVE DATES"/>
             <LiveDates/>
+            <ImageBarrier imgData={AuRaImage1} heading="FEEDBACK"/>
+            <Feedback />
             <Footer/>
         </>
 
