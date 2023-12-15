@@ -1,25 +1,59 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function Feedback() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
   const touchRef = useRef(null);
+  const intervalRef = useRef(null);
+  const [slideOutLeft, setSlideOutLeft] = useState(false);
+  const [slideOutRight, setSlideOutRight] = useState(false);
+  const [LeftOrRight, setLeftOrRight] = useState(null); //left = 0, right = 1
 
-  const texts = ['Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-    'Text 2', 'Text 3', 'Text 4', 'Text 5'];
-  const names = ['Name 1', 'Name 2', 'Name 3', 'Name 4', 'Name 5'];
+
+  const texts = ['Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', 'Text 2', 'Text 3', 'Text 4', 'Text 5'];
+  const names = ['Deine Mum', 'Name 2', 'Name 3', 'Name 4', 'Name 5'];
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? texts.length - 1 : prevIndex - 1));
+    setSlideOutLeft(true);
+    setLeftOrRight(0)
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? texts.length - 1 : prevIndex - 1));
+      setSlideOutLeft(false);
+      resetInterval();
+    }, 1000); // Zeit, die für die Animation benötigt wird
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
+    setSlideOutRight(true);
+    setLeftOrRight(1)
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
+      setSlideOutRight(false);
+      resetInterval();
+    }, 1000)
   };
 
   const handlePointClick = (index) => {
-    setCurrentIndex(index);
+    if (index > currentIndex) {
+      setSlideOutRight(true);
+      setLeftOrRight(1);
+    } else {
+      setSlideOutLeft(true);
+      setLeftOrRight(0);
+    }
+  
+    setTimeout(() => {
+      if (index > currentIndex) {
+        setSlideOutRight(false);
+      } else {
+        setSlideOutLeft(false);
+      }
+      
+      setCurrentIndex(index);
+      resetInterval();
+    }, 1000);
   };
+  
 
   const handleTouchStart = (e) => {
     setTouchStartX(e.touches[0].clientX);
@@ -44,7 +78,41 @@ export default function Feedback() {
     setTouchStartX(null);
   };
 
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
+    }, 10000);
+  };
 
+  useEffect(() => {
+    resetInterval();
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
+
+  const getClassName = () => {
+
+    if (LeftOrRight === 0) {
+      if (slideOutLeft) {
+        return 'slide-out-right';
+      } else {
+        return 'slide-in-left';
+      }
+    } else if (LeftOrRight === 1) {
+      if (slideOutRight) {
+        return 'slide-out-left';
+      } else {
+        return 'slide-in-right';
+      }
+    }
+   };
 
   return (
     <div
@@ -55,13 +123,20 @@ export default function Feedback() {
       ref={touchRef}
     >
       <div className="left-feedback--container col-3">
-        <div className="left-arrow-feedback--container">
 
+
+        <div class="left-arrow arrow" onClick={handlePrevious}>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+
+
+
       </div>
       <div className="middle-feedback--container col-6">
-        <div className="text-feedback--container">
-          <h3>
+        <div className={`text-feedback--container ${getClassName()}`}>
+          <h3>right
             {texts[currentIndex]}
           </h3>
         </div>
@@ -83,6 +158,12 @@ export default function Feedback() {
         </div>
       </div>
       <div className="right-feedback--container col-3">
+
+        <div class="right-arrow arrow" onClick={handleNext}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
       </div>
     </div>

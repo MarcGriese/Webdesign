@@ -8,16 +8,16 @@ export default function LiveDates() {
 
                 </h1>
             </div> */}
-            <div className="lives-dates-information--container col-9">
+            <div className="live-dates-information--container col-9">
                 <p>
                     No upcoming tour dates for Au/Ra. Get the newsletter for updates on live gig information, shows on sale, and concert ticket pre-sales.
                 </p>
             </div>
-            <button className="release-button">
+            <a className="release-button" target="_blank" href="https://forms.sonymusicfans.com/campaign/signup_au-ra_2018_09_13/">
                 <h3>
                     Sign Me Up!
                 </h3>
-            </button>
+            </a>
         </div>
     )
 }
