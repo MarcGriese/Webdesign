@@ -20,3 +20,40 @@
     display: flex;
     align-items: center;
 }
+
+.dates-button--container {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dates-button {
+    min-height: 5vh;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38b78b;
+    color: #03061c;
+    border: 2px solid #03061c;
+    transition: .3s;
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    h3 {
+        color: #03061c;
+    }
+}
+
+
+.dates-button:hover {
+    background-color: #03061c;
+    color: #38b78b;
+    border: 2px solid #38b78b;
+
+    h3 {
+        color: #38b78b;
+    }
+}

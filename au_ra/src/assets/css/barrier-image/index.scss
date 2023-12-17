@@ -1,15 +1,16 @@
 .barrier_image--container {
+    background-size: cover;
+    background-position: center 55%;
     height: 20vh;
     background-color: #023934;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.barrier-image {
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center 80%;
+.barrier-heading {
+    text-align: center;
+    color: white;
+    z-index: 1;
 }
