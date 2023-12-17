@@ -1,95 +1,77 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-export default function Feedback() {
+const Feedback = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [touchStartX, setTouchStartX] = useState(null);
-  const touchRef = useRef(null);
   const intervalRef = useRef(null);
-  const [slideOutLeft, setSlideOutLeft] = useState(false);
-  const [slideOutRight, setSlideOutRight] = useState(false);
-  const [LeftOrRight, setLeftOrRight] = useState(null); //left = 0, right = 1
+  const [slideDirection, setSlideDirection] = useState(null);
 
+  const texts = [
+    "Hey Au/Ra! Your music has this magic that transports me to another world. You bring clarity to dark moments and make me feel like I'm not alone. Thank you for that!",
+    "Hey Jamie, your voice feels like a friend guiding me through both the highs and lows. Your melodies have this magnetic pull that keeps me coming back for more every time.",
+    "Hi Au/Ra! Your lyrics always hit home and illuminate my thoughts. You have this knack for touching us as if you're singing directly to our hearts.",
+    "Hey Au/Ra! Your sound is so unique, it makes me think and dance at the same time. Thank you for showing yourself through your music. You're an inspiration!",
+    "Dear Au/Ra, your music paints emotions in ways I never knew possible. Your melodies create a sanctuary where I can lose myself and find myself all at once. Thank you for that incredible journey!"
+  ];
 
-  const texts = ['Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', 'Text 2', 'Text 3', 'Text 4', 'Text 5'];
-  const names = ['Deine Mum', 'Name 2', 'Name 3', 'Name 4', 'Name 5'];
+  const names = [
+    '~ David',
+    '~ Cassia',
+    '~ Liam',
+    '~ Sophia',
+    '~ Evelyn'
+  ];
 
   const handlePrevious = () => {
-    setSlideOutLeft(true);
-    setLeftOrRight(0)
+    setSlideDirection('slide-out-right');
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex === 0 ? texts.length - 1 : prevIndex - 1));
-      setSlideOutLeft(false);
+      setSlideDirection('slide-in-left');
       resetInterval();
-    }, 1000); // Zeit, die für die Animation benötigt wird
+    }, 500); // Zeit für die Animation
   };
 
   const handleNext = () => {
-    setSlideOutRight(true);
-    setLeftOrRight(1)
+    setSlideDirection('slide-out-left');
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
-      setSlideOutRight(false);
+      setSlideDirection('slide-in-right');
       resetInterval();
-    }, 1000)
+    }, 500); // Zeit für die Animation
   };
 
   const handlePointClick = (index) => {
     if (index > currentIndex) {
-      setSlideOutRight(true);
-      setLeftOrRight(1);
+      setSlideDirection('slide-out-left');
     } else {
-      setSlideOutLeft(true);
-      setLeftOrRight(0);
+      setSlideDirection('slide-out-right');
     }
   
     setTimeout(() => {
-      if (index > currentIndex) {
-        setSlideOutRight(false);
-      } else {
-        setSlideOutLeft(false);
-      }
-      
       setCurrentIndex(index);
+      if (index > currentIndex) {
+        setSlideDirection('slide-in-right');
+      } else {
+        setSlideDirection('slide-in-left');
+      }
       resetInterval();
-    }, 1000);
+    }, 500); // Zeit für die Animation
   };
   
-
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    if (touchStartX !== null) {
-      const currentX = e.touches[0].clientX;
-      const diff = touchStartX - currentX;
-
-      if (diff > 50) {
-        handleNext();
-        setTouchStartX(null);
-      } else if (diff < -50) {
-        handlePrevious();
-        setTouchStartX(null);
-      }
-    }
-  };
-
-  const handleTouchEnd = () => {
-    setTouchStartX(null);
-  };
-
   const resetInterval = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
-    }, 10000);
+      setSlideDirection('slide-out-left');
+      setTimeout(() => {
+        setSlideDirection('slide-in-right');
+      }, 500); // Zeit für die Animation
+    }, 10000); // Intervall für den automatischen Textwechsel
   };
 
   useEffect(() => {
     resetInterval();
-
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -97,57 +79,26 @@ export default function Feedback() {
     };
   }, []);
 
-  const getClassName = () => {
-
-    if (LeftOrRight === 0) {
-      if (slideOutLeft) {
-        return 'slide-out-right';
-      } else {
-        return 'slide-in-left';
-      }
-    } else if (LeftOrRight === 1) {
-      if (slideOutRight) {
-        return 'slide-out-left';
-      } else {
-        return 'slide-in-right';
-      }
-    }
-   };
-
   return (
-    <div
-      className="feedback--container row"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      ref={touchRef}
-    >
+    <div className="feedback--container row">
       <div className="left-feedback--container col-3">
-
-
-        <div class="left-arrow arrow" onClick={handlePrevious}>
+        <div className="left-arrow arrow" onClick={handlePrevious}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-
-
-
       </div>
       <div className="middle-feedback--container col-6">
-        <div className={`text-feedback--container ${getClassName()}`}>
-          <h3>right
-            {texts[currentIndex]}
-          </h3>
+        <div className={`text-feedback--container ${slideDirection}`}>
+          <h3>{texts[currentIndex]}</h3>
         </div>
-        <div className="name-feedback--container">
-          <p>
-            {names[currentIndex]}
-          </p>
+        <div className={`name-feedback--container ${slideDirection}`}>
+          <p>{names[currentIndex]}</p>
         </div>
-        <div className="current-index-feedback--container" style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="current-index-feedback--container">
           {[...Array(texts.length)].map((_, index) => (
-            <div className='point-feedback--container'
+            <div
+              className="point-feedback--container"
               key={index}
               style={{
                 backgroundColor: index === currentIndex ? 'white' : 'grey',
@@ -158,14 +109,14 @@ export default function Feedback() {
         </div>
       </div>
       <div className="right-feedback--container col-3">
-
-        <div class="right-arrow arrow" onClick={handleNext}>
+        <div className="right-arrow arrow" onClick={handleNext}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Feedback;

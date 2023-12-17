@@ -9,6 +9,7 @@ import AuRaImage1 from "../../assets/images/aura4.jpeg"
 import AllReleases from "../../components/all-releases";
 import LiveDates from "../../components/live-dates";
 import Feedback from "../../components/fan-feedback";
+import Image from "../../assets/images/concert.jpg"
 
 
 
@@ -19,11 +20,11 @@ export default function Home() {
             <HomeImage/>
 
             <AboutAuRa />
-            <ImageBarrier imgData={AuRaImage1} heading="RELEASES"/>
+            <ImageBarrier imgData={Image} heading="RELEASES"/>
             <AllReleases/>
-            <ImageBarrier imgData={AuRaImage1} heading="LIVE DATES"/>
+            <ImageBarrier imgData={Image} heading="LIVE DATES"/>
             <LiveDates/>
-            <ImageBarrier imgData={AuRaImage1} heading="FEEDBACK"/>
+            <ImageBarrier imgData={Image} heading="FAN MESSAGES"/>
             <Feedback />
             <Footer/>
         </>

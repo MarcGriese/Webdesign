@@ -1,12 +1,12 @@
 import React from "react";
 import { Spotify } from "react-spotify-embed";
 
-export default function Release({ title, text, imgData, link, release_date }) {
+export default function Release({ title, text, imgData, link, release_date, addBorder }) {
 
     console.log(link)
 
     return (
-        <div className="release--container row">
+        <div className={`release--container ${addBorder ? 'with-border' : ''} row`}>
             <div className="left-release--container col-6">
                 <img src={imgData} alt="" className="release-image" />
             </div>
