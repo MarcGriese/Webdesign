@@ -40,25 +40,29 @@
     line-height: 1.6;
     // letter-spacing: 1px;
     text-align: justify;
+
+    h3 {
+        text-align: center;
+    }
 }
 
 /* Animation für das Herausfliegen nach links */
 .slide-out-left {
-    animation: slideOutLeft 1s forwards;
+    animation: slideOutLeft 0.5s forwards;
 }
 
 /* Animation für das Hereinfliegen von rechts */
 .slide-in-right {
-    animation: slideInRight 1s forwards;
+    animation: slideInRight 0.5s forwards;
 }
 
 .slide-out-right {
-    animation: slideOutRight 1s forwards;
+    animation: slideOutRight 0.5s forwards;
 }
 
 /* Animation für das Hereinfliegen von rechts */
 .slide-in-left {
-    animation: slideInLeft 1s forwards;
+    animation: slideInLeft 0.5s forwards;
 }
 
 
