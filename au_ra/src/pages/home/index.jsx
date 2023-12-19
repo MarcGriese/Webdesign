@@ -20,7 +20,7 @@ export default function Home() {
             <HomeImage/>
 
             <AboutAuRa />
-            <ImageBarrier imgData={Image} heading="RELEASES"/>
+            <ImageBarrier imgData={AuRaImage1} heading="RELEASES"/>
             <AllReleases/>
             <ImageBarrier imgData={Image} heading="LIVE DATES"/>
             <LiveDates/>
