@@ -34,7 +34,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #38b78b;
+    background-image: linear-gradient(-180deg, #38b78b 0%, #29926f 100%);
+    //background-color: #38b78b;
     color: #03061c;
     border: 2px solid #03061c;
     transition: .3s;
@@ -49,7 +50,8 @@
 
 
 .dates-button:hover {
-    background-color: #03061c;
+    background-image: linear-gradient(-180deg, #03061c 0%, #020516 100%);
+    //background-color: #03061c;
     color: #38b78b;
     border: 2px solid #38b78b;
 
