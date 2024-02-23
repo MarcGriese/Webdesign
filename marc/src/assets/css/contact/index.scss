@@ -1,0 +1,55 @@
+.contact__container {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.contact-content__container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.whats-next-contact__container {
+    color: #8D21E6;
+}
+
+.header-contact__container {
+    font-weight: bold;
+}
+
+.text-contact__container {
+    color: #BABABD;
+    text-align: center;
+}
+
+.text-contact-bold {
+    font-weight: bold;
+}
+
+.mail-contact__container {
+    display: flex;
+    flex-direction: row;
+    min-width: fit-content;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #8D21E6;
+    gap: 10px;
+}
+
+.mail-icon {
+    height: 100%;
+}
+
+.mail-text-contact__container {
+    overflow: visible;
+    white-space: nowrap;
+
+}
