@@ -1,0 +1,14 @@
+@import "global";
+@import "media-queries";
+@import "./header/index.scss";
+@import "./welcomepage/index.scss";
+@import "./skillset/index.scss";
+@import "./footer/index.scss";
+@import "./feedback/index.scss";
+@import "./contact/index.scss";
+
+.placeholder {
+    height: 10vh;
+    background-color: black;
+    width:  100%;
+}

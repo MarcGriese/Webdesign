@@ -1,0 +1,122 @@
+.footer__container {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-footer__container {
+    min-height: inherit;
+    background-color: #181824;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-footer-content__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    min-width: 55%;
+    max-width: 80%;
+}
+
+.left-footer-content__container p {
+    overflow: visible;
+    white-space: nowrap;
+}
+
+.footer-phone-icon__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.footer-phone-icon {
+    width: 100%;
+    max-width: 100%;
+}
+
+.middle-footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-marc-griese-logo_container {
+    max-width: 60%;
+}
+
+
+.right-footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-footer-content__container {
+    min-width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 55%;
+    max-width: 80%;
+}
+
+.right-footer-content__container p {
+    overflow: visible;
+    white-space: nowrap;
+}
+
+.right-upper-footer-content__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-lower-footer-content__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+}
+
+.footer-socials-icon__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-icon {
+    width: 100%;
+}
+
+.footer-copyright-icon__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright-icon {
+    width: 100%;
+}
+
+.footer-copyright-text {
+    font-weight: bold;
+}
+
+.lower-footer__container {
+    position: relative;
+    width: 100%;
+    height: 3vh;
+    background: linear-gradient(to right, #5221E6, #8D21E6);
+}
