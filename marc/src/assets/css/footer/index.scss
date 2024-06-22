@@ -13,6 +13,7 @@
 
 .left-footer__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -31,6 +32,20 @@
     white-space: nowrap;
 }
 
+.left-footer-lower-content__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    min-width: 55%;
+    max-width: 80%;
+}
+
+.left-footer-lower-content__container p {
+    overflow: visible;
+    white-space: nowrap;
+}
+
 .footer-phone-icon__container {
     display: flex;
     justify-content: center;
@@ -39,6 +54,19 @@
 }
 
 .footer-phone-icon {
+    width: 100%;
+    max-width: 100%;
+}
+
+.footer-flag-icon__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 10%;
+}
+
+.footer-flag-icon {
     width: 100%;
     max-width: 100%;
 }

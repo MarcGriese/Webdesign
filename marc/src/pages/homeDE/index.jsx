@@ -9,6 +9,7 @@ import Skillset_ComponentDE from "../../components/skillsetDE";
 import welcomepic from "../../assets/pictures/welcome-pic2.png"
 
 import PhoneIcon from "../../assets/pictures/phone-icon.png"
+import FlagGB from "../../assets/pictures/flag-gb-icon.png"
 import LinkedInIcon from "../../assets/pictures/linkedin-icon.png"
 import XIcon from "../../assets/pictures/x-icon.png"
 import DribbleIcon from "../../assets/pictures/dribble-icon.png"
@@ -266,6 +267,14 @@ export default function HomeDE() {
                             </div>
                             <p>+49 176 57903216</p>
                         </div>
+
+                        <Link to="/en" className="left-footer-lower-content__container">
+                            <p>Zu EN-Version:</p>
+                            <div className="footer-flag-icon__container">
+                                <img src={FlagGB} alt="phone icon" className="footer-flag-icon" />
+                            </div>
+                        </Link>
+
                     </div>
                     <div className="middle-footer__container col-4">
                         <img src={LogoMG} alt="" className="footer-marc-griese-logo_container" />

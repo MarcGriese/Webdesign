@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import MarcIMG from "../../assets/pictures/welcome-pic-small.png"
 import LogoMG from "../../assets/pictures/logo-mg-white.png"
@@ -6,6 +7,7 @@ import MenuIcon from "../../assets/pictures/menu-icon.png"
 import Skillset_Component from "../../components/skillset";
 
 import welcomepic from "../../assets/pictures/welcome-pic2.png"
+import FlagDE from "../../assets/pictures/flag-de-icon.png"
 
 import PhoneIcon from "../../assets/pictures/phone-icon.png"
 import LinkedInIcon from "../../assets/pictures/linkedin-icon.png"
@@ -17,11 +19,24 @@ import MailIcon from "../../assets/pictures/mail-icon.png"
 
 import FeedbackIMG from "../../assets/pictures/feedback-img.png"
 
-const MenuComponent = () => {
+const MenuComponent = ({ scrollToSkillset, scrollToFeedback, scrollToFooter }) => {
     const [lastClicked, setLastClicked] = useState('About Me'); // Default to 'About Me' as initially clicked
 
     const handleClick = (menuItem) => {
         setLastClicked(menuItem);
+        switch (menuItem) {
+            case 'About Me':
+                scrollToSkillset();
+                break;
+            case 'Work':
+                scrollToFeedback();
+                break;
+            case 'Contact':
+                scrollToFooter();
+                break;
+            default:
+                break;
+        }
     };
 
     return (
@@ -39,7 +54,7 @@ const MenuComponent = () => {
     );
 };
 
-function WelcomeComponent() {
+function WelcomeComponent({ scrollToSkillset, scrollToFeedback, scrollToFooter }) {
     const [isMobile, setIsMobile] = useState(document.documentElement.clientWidth < 768);
 
     useEffect(() => {
@@ -63,6 +78,19 @@ function WelcomeComponent() {
 
     const handleMenuItemClick = (item) => {
         setSelectedItem(item);
+        switch (item) {
+            case 'about':
+                scrollToSkillset();
+                break;
+            case 'work':
+                scrollToFeedback();
+                break;
+            case 'contact':
+                scrollToFooter();
+                break;
+            default:
+                break;
+        }
         setMenuOpen(false);
     };
 
@@ -126,7 +154,11 @@ function WelcomeComponent() {
                         </div>
                     </div>
                     <div className="right-desktop-welcome-component__container col-7">
-                        <MenuComponent />
+                        <MenuComponent
+                            scrollToSkillset={scrollToSkillset}
+                            scrollToFeedback={scrollToFeedback}
+                            scrollToFooter={scrollToFooter}
+                        />
                     </div>
                 </div>
                 <div className="welcome-much__container">
@@ -141,15 +173,29 @@ function WelcomeComponent() {
 
 
 export default function HomeEN() {
+    const skillsetRef = useRef(null);
+    const feedbackRef = useRef(null);
+    const contactRef = useRef(null);
+
+    const handleScrollTo = (ref) => {
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <Header />
-            <WelcomeComponent />
+            <WelcomeComponent
+                scrollToSkillset={() => handleScrollTo(skillsetRef)}
+                scrollToFeedback={() => handleScrollTo(feedbackRef)}
+                scrollToFooter={() => handleScrollTo(contactRef)}
+            />
 
-            <Skillset_Component />
+            <Skillset_Component ref={skillsetRef} />
 
             {/* Customer feedback */}
-            <div className="customer-feedback__container row">
+            <div className="customer-feedback__container row" ref={feedbackRef}>
                 <div className="customer-feedback-content_container row">
                     <div className="left-customer-feedback-content__container col-6">
                         <div className="feedback-content-wrap">
@@ -189,7 +235,7 @@ export default function HomeEN() {
             <div className="placeholder"></div>
 
             {/* contact */}
-            <div className="contact__container">
+            <div className="contact__container" ref={contactRef}>
                 <div className="contact-content__container">
                     <p className="whats-next-contact__container">
                         WHATS NEXT
@@ -198,7 +244,7 @@ export default function HomeEN() {
                         Let's work together.
                     </h2>
                     <p className="text-contact__container">
-                        If you’d like to talk about a project you want help with, just drop me a message at <span className="text-contact-bold">contact@mg-webdev.com</span> I’m currently available for any design projects, dashboard designs or landing pages gigs.
+                        If you’d like to talk about a project you want help with, just drop me a message at <span className="text-contact-bold">contact@mg-webdev.com</span> <br/> I’m currently available for any design projects, dashboard designs or landing pages gigs.
                     </p>
                     <div className="mail-contact__container">
                         <p className="mail-text-contact__container">
@@ -221,6 +267,12 @@ export default function HomeEN() {
                             </div>
                             <p>+49 176 57903216</p>
                         </div>
+                        <Link to="/de" className="left-footer-lower-content__container">
+                            <p>To DE-Version:</p>
+                            <div className="footer-flag-icon__container">
+                                <img src={FlagDE} alt="phone icon" className="footer-flag-icon" />
+                            </div>
+                        </Link>
                     </div>
                     <div className="middle-footer__container col-4">
                         <img src={LogoMG} alt="" className="footer-marc-griese-logo_container" />
