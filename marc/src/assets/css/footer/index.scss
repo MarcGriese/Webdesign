@@ -105,7 +105,7 @@
 .right-upper-footer-content__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -222,13 +222,6 @@
 .right-footer-content__container p {
     overflow: visible;
     white-space: nowrap;
-}
-
-.right-upper-footer-content__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .right-lower-footer-content__container {

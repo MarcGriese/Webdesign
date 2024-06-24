@@ -6,12 +6,13 @@ import LogoMG from "../../assets/pictures/logo-mg-white.png"
 import MenuIcon from "../../assets/pictures/menu-icon.png"
 import Skillset_ComponentDE from "../../components/skillsetDE";
 
-import welcomepic from "../../assets/pictures/welcome-pic2.png"
+import welcomepic from "../../assets/pictures/welcome-pic-DE.png"
 
 import PhoneIcon from "../../assets/pictures/phone-icon.png"
 import FlagGB from "../../assets/pictures/flag-gb-icon.png"
 import LinkedInIcon from "../../assets/pictures/linkedin-icon.png"
 import XIcon from "../../assets/pictures/x-icon.png"
+import InstagramIcon from "../../assets/pictures/instagram-icon.png"
 import DribbleIcon from "../../assets/pictures/dribble-icon.png"
 import CopyrightIcon from "../../assets/pictures/copyright-icon.png"
 
@@ -44,9 +45,9 @@ const MenuComponent = ({ scrollToSkillset, scrollToFeedback, scrollToFooter }) =
             <div className="menu-welcome-component__container col-4" onClick={() => handleClick('About Me')} style={{ backgroundColor: lastClicked === 'About Me' ? '#5221E6' : 'transparent' }}>
                 <h3>Über mich</h3>
             </div>
-            <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Work')} style={{ backgroundColor: lastClicked === 'Work' ? '#5221E6' : 'transparent' }}>
+            {/* <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Work')} style={{ backgroundColor: lastClicked === 'Work' ? '#5221E6' : 'transparent' }}>
                 <h3>Meine Arbeit</h3>
-            </div>
+            </div> */}
             <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Contact')} style={{ backgroundColor: lastClicked === 'Contact' ? '#5221E6' : 'transparent' }}>
                 <h3>Kontakt</h3>
             </div>
@@ -113,12 +114,12 @@ function WelcomeComponent({ scrollToSkillset, scrollToFeedback, scrollToFooter }
                             >
                                 Über mich
                             </div>
-                            <div
+                            {/* <div
                                 className={`menu-item ${selectedItem === 'work' ? 'selected' : ''}`}
                                 onClick={() => handleMenuItemClick('work')}
                             >
                                 Meine Arbeit
-                            </div>
+                            </div> */}
                             <div
                                 className={`menu-item ${selectedItem === 'contact' ? 'selected' : ''}`}
                                 onClick={() => handleMenuItemClick('contact')}
@@ -195,15 +196,15 @@ export default function HomeDE() {
             <Skillset_ComponentDE ref={skillsetRef} />
 
             {/* Customer feedback */}
-            <div className="customer-feedback__container row" ref={feedbackRef}>
+            {/* <div className="customer-feedback__container row" ref={feedbackRef}>
                 <div className="customer-feedback-content_container row">
                     <div className="left-customer-feedback-content__container col-6">
                         <div className="feedback-content-wrap">
                             <h1 className="feedback-header-text">
-                                Was meine Kunden über mich sagen
+                                Was meine Kunden über mich sagen:
                             </h1>
                             <p className="feedback-content-text">
-                                Hier sind ein paar Eindrücke von Personen, mit denen ich in zuletzt zusammengearbeitet habe.
+                                Hier sind ein paar Eindrücke von Personen, mit denen ich zuletzt zusammengearbeitet habe.
                             </p>
                             <h3 className="feedback-testimonials-link">
                                 Alle Berichte ansehen
@@ -230,9 +231,9 @@ export default function HomeDE() {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
 
-            <div className="placeholder"></div>
+            {/* <div className="placeholder"></div>
 
             {/* contact */}
             <div className="contact__container" ref={contactRef}>
@@ -282,15 +283,15 @@ export default function HomeDE() {
                     <div className="right-footer__container col-4">
                         <div className="right-footer-content__container">
                             <div className="right-upper-footer-content__container">
-                                <div className="footer-social-icon__container">
+                                <Link to="https://www.linkedin.com/in/marc-griese/" target="_blank" rel="noopener noreferrer" className="footer-social-icon__container">
                                     <img src={LinkedInIcon} alt="LinkedIn icon" className="footer-social-icon" />
-                                </div>
-                                <div className="footer-social-icon__container">
-                                    <img src={XIcon} alt="X icon" className="footer-social-icon" />
-                                </div>
-                                <div className="footer-social-icon__container">
+                                </Link>
+                                <Link to="https://www.instagram.com/mxrcgriese/" target="_blank" rel="noopener noreferrer" className="footer-social-icon__container">
+                                    <img src={InstagramIcon} alt="X icon" className="footer-social-icon" />
+                                </Link>
+                                {/* <div className="footer-social-icon__container">
                                     <img src={DribbleIcon} alt="Dribble icon" className="footer-social-icon" />
-                                </div>
+                                </div> */}
                             </div>
                             <div className="right-lower-footer-content__container">
                                 <div className="footer-copyright-icon__container">

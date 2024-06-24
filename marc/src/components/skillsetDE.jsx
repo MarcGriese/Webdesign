@@ -1,12 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import UXUIDesignIcon from "../assets/pictures/ux-ui-design-icon.png"
 import CodingIcon from "../assets/pictures/coding-icon.png"
 import CreativityIcon from "../assets/pictures/creativity-icon.png"
 import SEOIcon from "../assets/pictures/search-icon.png"
 
-export default function Skillset_ComponentDE() {
-    return (
-        <div className="skillset__container row">
+const Skillset_ComponentDE = forwardRef((props, ref) => (
+        <div className="skillset__container row" ref={ref}>
             <div className="skillset-content_container row">
                 <div className="skillset-column1__container col-4">
                     <h1 className="skillset-header-text">Fähigkeiten</h1>
@@ -37,7 +36,7 @@ export default function Skillset_ComponentDE() {
                             </h2>
 
                             <p className="skillset-category-text">
-                                Während meinem Studium konnte ich ein sehr gutes Verständnis für HTML, CSS und JavaScript entwickeln. Ein Framework wie React trägt wesentlich zur Verbesserung der Codequalität bei und ermöglicht effizientes Arbeiten.
+                                Während meinem Studium konnte ich ein sehr gutes Verständnis für HTML, CSS und JavaScript entwickeln. Ein Framework wie React trägt zur Verbesserung der Codequalität bei und ermöglicht effizientes Arbeiten.
                             </p>
 
                         </div>
@@ -60,12 +59,13 @@ export default function Skillset_ComponentDE() {
                             </h2>
 
                             <p className="skillset-category-text">
-                                Die Optimierung der Sichtbarkeit Ihrer Website für Suchmaschinen wie Google bringt mehrere Vorteile mit sich, wie z.B.  Lead-Generierung oder Steigerung der Markenbekanntheit.
+                            Die Optimierung der Sichtbarkeit Ihrer Website für Suchmaschinen wie Google oder Yahoo bringt mehrere Vorteile mit sich, wie zum Beispiel kosteneffiziente Lead-Generierung oder Steigerung der Bekanntheit Ihrer Marke.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+));
+
+export default Skillset_ComponentDE;

@@ -12,6 +12,7 @@ import FlagDE from "../../assets/pictures/flag-de-icon.png"
 import PhoneIcon from "../../assets/pictures/phone-icon.png"
 import LinkedInIcon from "../../assets/pictures/linkedin-icon.png"
 import XIcon from "../../assets/pictures/x-icon.png"
+import InstagramIcon from "../../assets/pictures/instagram-icon.png"
 import DribbleIcon from "../../assets/pictures/dribble-icon.png"
 import CopyrightIcon from "../../assets/pictures/copyright-icon.png"
 
@@ -44,9 +45,9 @@ const MenuComponent = ({ scrollToSkillset, scrollToFeedback, scrollToFooter }) =
             <div className="menu-welcome-component__container col-4" onClick={() => handleClick('About Me')} style={{ backgroundColor: lastClicked === 'About Me' ? '#5221E6' : 'transparent' }}>
                 <h3>About Me</h3>
             </div>
-            <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Work')} style={{ backgroundColor: lastClicked === 'Work' ? '#5221E6' : 'transparent' }}>
+            {/* <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Work')} style={{ backgroundColor: lastClicked === 'Work' ? '#5221E6' : 'transparent' }}>
                 <h3>Work</h3>
-            </div>
+            </div> */}
             <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Contact')} style={{ backgroundColor: lastClicked === 'Contact' ? '#5221E6' : 'transparent' }}>
                 <h3>Contact</h3>
             </div>
@@ -113,12 +114,12 @@ function WelcomeComponent({ scrollToSkillset, scrollToFeedback, scrollToFooter }
                             >
                                 About Me
                             </div>
-                            <div
+                            {/* <div
                                 className={`menu-item ${selectedItem === 'work' ? 'selected' : ''}`}
                                 onClick={() => handleMenuItemClick('work')}
                             >
                                 Work
-                            </div>
+                            </div> */}
                             <div
                                 className={`menu-item ${selectedItem === 'contact' ? 'selected' : ''}`}
                                 onClick={() => handleMenuItemClick('contact')}
@@ -194,7 +195,7 @@ export default function HomeEN() {
 
             <Skillset_Component ref={skillsetRef} />
 
-            {/* Customer feedback */}
+            {/* Customer feedback
             <div className="customer-feedback__container row" ref={feedbackRef}>
                 <div className="customer-feedback-content_container row">
                     <div className="left-customer-feedback-content__container col-6">
@@ -232,7 +233,7 @@ export default function HomeEN() {
 
             </div>
 
-            <div className="placeholder"></div>
+            <div className="placeholder"></div> */}
 
             {/* contact */}
             <div className="contact__container" ref={contactRef}>
@@ -244,14 +245,14 @@ export default function HomeEN() {
                         Let's work together.
                     </h2>
                     <p className="text-contact__container">
-                        If you’d like to talk about a project you want help with, just drop me a message at <span className="text-contact-bold">contact@mg-webdev.com</span> <br/> I’m currently available for any design projects, dashboard designs or landing pages gigs.
+                        If you’d like to talk about a project you want help with, just drop me a message at <span className="text-contact-bold">contact@mg-webdev.com</span> <br /> I’m currently available for any design projects, dashboard designs or landing pages gigs.
                     </p>
-                    <div className="mail-contact__container">
+                    <a className="mail-contact__container" href="mailto:contact@mg-webdev.com">
                         <p className="mail-text-contact__container">
                             WRITE ME AN EMAIL
                         </p>
                         <img src={MailIcon} alt="email icon" className="mail-icon" />
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -280,15 +281,15 @@ export default function HomeEN() {
                     <div className="right-footer__container col-4">
                         <div className="right-footer-content__container">
                             <div className="right-upper-footer-content__container">
-                                <div className="footer-social-icon__container">
+                                <Link to="https://www.linkedin.com/in/marc-griese/" target="_blank" rel="noopener noreferrer" className="footer-social-icon__container">
                                     <img src={LinkedInIcon} alt="LinkedIn icon" className="footer-social-icon" />
-                                </div>
-                                <div className="footer-social-icon__container">
-                                    <img src={XIcon} alt="X icon" className="footer-social-icon" />
-                                </div>
-                                <div className="footer-social-icon__container">
+                                </Link>
+                                <Link to="https://www.instagram.com/mxrcgriese/" target="_blank" rel="noopener noreferrer" className="footer-social-icon__container">
+                                    <img src={InstagramIcon} alt="X icon" className="footer-social-icon" />
+                                </Link>
+                                {/* <div className="footer-social-icon__container">
                                     <img src={DribbleIcon} alt="Dribble icon" className="footer-social-icon" />
-                                </div>
+                                </div> */}
                             </div>
                             <div className="right-lower-footer-content__container">
                                 <div className="footer-copyright-icon__container">
