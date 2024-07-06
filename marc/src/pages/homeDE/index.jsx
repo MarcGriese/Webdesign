@@ -130,9 +130,9 @@ function WelcomeComponent({ scrollToSkillset, scrollToFeedback, scrollToFooter }
                 <div className="menu__container col-7">
                     <div className="mobile-marc-text__container row">
                         <h1 className="marc-griese-text col-10">
-                            I'm Marc Griese. <br /> A Web Developer <br />
+                            Ich bin Marc Griese. <br /> Ein Webentwickler <br />
                             <span className="marc-griese-text__highlighted">
-                                based in Germany.
+                                aus Deutschland.
                             </span>
                         </h1>
                     </div>
