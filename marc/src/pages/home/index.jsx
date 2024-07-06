@@ -1,24 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
+// Components
 import Header from "../../components/header";
+import Skillset_Component from "../../components/skillset";
+import Contact from "../../components/contact";
+import Footer from "../../components/footer";
+
+// Images
 import MarcIMG from "../../assets/pictures/welcome-pic-small.png"
 import LogoMG from "../../assets/pictures/logo-mg-white.png"
 import MenuIcon from "../../assets/pictures/menu-icon.png"
-import Skillset_Component from "../../components/skillset";
-
 import welcomepic from "../../assets/pictures/welcome-pic2.png"
-import FlagDE from "../../assets/pictures/flag-de-icon.png"
-
-import PhoneIcon from "../../assets/pictures/phone-icon.png"
-import LinkedInIcon from "../../assets/pictures/linkedin-icon.png"
-import XIcon from "../../assets/pictures/x-icon.png"
-import InstagramIcon from "../../assets/pictures/instagram-icon.png"
-import DribbleIcon from "../../assets/pictures/dribble-icon.png"
-import CopyrightIcon from "../../assets/pictures/copyright-icon.png"
-
-import MailIcon from "../../assets/pictures/mail-icon.png"
 
 import FeedbackIMG from "../../assets/pictures/feedback-img.png"
+import Recent_Projects from "../../components/projects";
+
 
 const MenuComponent = ({ scrollToSkillset, scrollToFeedback, scrollToFooter }) => {
     const [lastClicked, setLastClicked] = useState('About Me'); // Default to 'About Me' as initially clicked
@@ -193,7 +190,11 @@ export default function HomeEN() {
                 scrollToFooter={() => handleScrollTo(contactRef)}
             />
 
+            {/* Skillset */}
             <Skillset_Component ref={skillsetRef} />
+            
+            {/* Recent Projects */}
+            <Recent_Projects ref={feedbackRef}/>
 
             {/* Customer feedback
             <div className="customer-feedback__container row" ref={feedbackRef}>
@@ -236,72 +237,12 @@ export default function HomeEN() {
             <div className="placeholder"></div> */}
 
             {/* contact */}
-            <div className="contact__container" ref={contactRef}>
-                <div className="contact-content__container">
-                    <p className="whats-next-contact__container">
-                        WHATS NEXT
-                    </p>
-                    <h2 className="header-contact__container">
-                        Let's work together.
-                    </h2>
-                    <p className="text-contact__container">
-                        If you’d like to talk about a project you want help with, just drop me a message at <span className="text-contact-bold">contact@mg-webdev.com</span> <br /> I’m currently available for any design projects, dashboard designs or landing pages gigs.
-                    </p>
-                    <a className="mail-contact__container" href="mailto:contact@mg-webdev.com">
-                        <p className="mail-text-contact__container">
-                            WRITE ME AN EMAIL
-                        </p>
-                        <img src={MailIcon} alt="email icon" className="mail-icon" />
-                    </a>
-                </div>
-            </div>
+            <Contact ref={contactRef}/>
 
             <div className="placeholder"></div>
 
             {/* footer */}
-            <div className="footer__container row">
-                <div className="upper-footer__container row">
-                    <div className="left-footer__container col-4">
-                        <div className="left-footer-content__container ">
-                            <div className="footer-phone-icon__container">
-                                <img src={PhoneIcon} alt="phone icon" className="footer-phone-icon" />
-                            </div>
-                            <p>+49 176 57903216</p>
-                        </div>
-                        <Link to="/de" className="left-footer-lower-content__container">
-                            <p>To DE-Version:</p>
-                            <div className="footer-flag-icon__container">
-                                <img src={FlagDE} alt="phone icon" className="footer-flag-icon" />
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="middle-footer__container col-4">
-                        <img src={LogoMG} alt="" className="footer-marc-griese-logo_container" />
-                    </div>
-                    <div className="right-footer__container col-4">
-                        <div className="right-footer-content__container">
-                            <div className="right-upper-footer-content__container">
-                                <Link to="https://www.linkedin.com/in/marc-griese/" target="_blank" rel="noopener noreferrer" className="footer-social-icon__container">
-                                    <img src={LinkedInIcon} alt="LinkedIn icon" className="footer-social-icon" />
-                                </Link>
-                                <Link to="https://www.instagram.com/mxrcgriese/" target="_blank" rel="noopener noreferrer" className="footer-social-icon__container">
-                                    <img src={InstagramIcon} alt="X icon" className="footer-social-icon" />
-                                </Link>
-                                {/* <div className="footer-social-icon__container">
-                                    <img src={DribbleIcon} alt="Dribble icon" className="footer-social-icon" />
-                                </div> */}
-                            </div>
-                            <div className="right-lower-footer-content__container">
-                                <div className="footer-copyright-icon__container">
-                                    <img src={CopyrightIcon} alt="Copyright icon" className="footer-copyright-icon" />
-                                </div>
-                                <p className="footer-copyright-text"> 2024 Marc Griese</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="lower-footer__container" />
-            </div>
+            <Footer/>
 
         </>
     )

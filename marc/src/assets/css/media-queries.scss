@@ -125,7 +125,30 @@
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  div.recent-project__container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  div.recent-project-left__container {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  div.recent-project-header__container {
+    height: 13.46vh;
+  }
+
+  div.recent-project-left-content__container {
+    height: 26.92vh;
+  }
+
+  br.responsive-break {
+    display: none;
+  }
+
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
