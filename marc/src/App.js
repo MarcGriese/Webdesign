@@ -7,6 +7,7 @@ import "@fontsource/ubuntu"; // Defaults to weight 400
 import "@fontsource/ubuntu/400.css"; // Specify weight
 import "@fontsource/ubuntu/latin-400.css"; // Specify weight and style
 import ScrollToTop from './components/ScrollToTop';
+import Projects from './pages/projects';
 
 const App = () => {
     return (
@@ -18,6 +19,8 @@ const App = () => {
                 <Route path='en' element={<HomeEN />} />
 
                 <Route path='*' element={<Navigate to='de' replace />} />
+
+                <Route path='test' element={<Projects/>}/>
             </Routes>
         </>
     )
