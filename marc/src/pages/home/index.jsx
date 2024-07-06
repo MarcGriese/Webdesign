@@ -147,9 +147,9 @@ function WelcomeComponent({ scrollToSkillset, scrollToFeedback, scrollToFooter }
                 {/* Hier ist dein Desktop-Code */}
                 <div className="desktop-welcome-component__container row">
                     <div className="left-desktop-welcome-component__container col-5">
-                        <div className="desktop-logo__container">
+                        <Link to="/en" className="desktop-logo__container">
                             <img src={LogoMG} alt="Marc Griese Logo" />
-                        </div>
+                        </Link>
                     </div>
                     <div className="right-desktop-welcome-component__container col-7">
                         <MenuComponent
