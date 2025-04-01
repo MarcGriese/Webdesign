@@ -224,10 +224,10 @@ export default function HomeDE() {
                                     “Marc is one of best designers I have worked with in my entire life. He is a designer and developer who is very capable of taking up complex projects and delivers impeccable design.”
                                 </p>
                                 <p className="feedback-customer-name">
-                                    Bananenbieger187
+                                    Max Mustermann
                                 </p>
                                 <p className="feedback-customer-company">
-                                    CEO, Baumwollfeld
+                                    CEO, Musterfirma
                                 </p>
                             </div>
                         </div>

@@ -1,5 +1,8 @@
 import React, { forwardRef } from "react";
+import { Link } from "react-router-dom";
 import PP_logo from "../assets/pictures/PennyPlanner_logo.png"
+import KT_logo from "../assets/pictures/Kanutours_Logo.png"
+import TAMMA_logo from "../assets/pictures/TAMMA_Logo.png"
 
 const Recent_ProjectsDE = forwardRef((props, ref) => {
 
@@ -14,17 +17,17 @@ const Recent_ProjectsDE = forwardRef((props, ref) => {
                             +
                         </span>
                     </h2>
-                    <div className="projects__customer">
-                        <img src={PP_logo} alt="Customer Logo" className="projects__customer-logo" />
-                    </div>
+                    <Link to="https://www.kanutours-meissenheim.de" target="_blank" className="projects__customer">
+                        <img src={KT_logo} alt="Customer Logo" className="projects__customer-logo" />
+                    </Link>
                 </div>
                 <div className="projects__right col-6">
-                    <div className="projects__customer">
+                    <Link to="https://www.tammalehmann.de" target="_blank" className="projects__customer">
+                        <img src={TAMMA_logo} alt="Customer Logo" className="projects__customer-logo" />
+                    </Link>
+                    <Link className="projects__customer">
                         <img src={PP_logo} alt="Customer Logo" className="projects__customer-logo" />
-                    </div>
-                    <div className="projects__customer">
-                        <img src={PP_logo} alt="Customer Logo" className="projects__customer-logo" />
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>
