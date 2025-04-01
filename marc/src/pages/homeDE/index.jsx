@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // Components
 import HeaderDE from "../../components/headerDE";

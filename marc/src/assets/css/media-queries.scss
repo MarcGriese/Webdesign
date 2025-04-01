@@ -223,6 +223,10 @@
   //   left: 0;
   // }
 
+  div.contact__content {
+    flex-direction: row;
+  }
+
   img.menu-icon__container {
     display: none;
   }
