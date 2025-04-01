@@ -46,7 +46,7 @@ export default function Footer() {
                                 <div className="footer-copyright-icon__container">
                                     <img src={CopyrightIcon} alt="Copyright icon" className="footer-copyright-icon" />
                                 </div>
-                                <p className="footer-copyright-text"> 2024 Marc Griese</p>
+                                <p className="footer-copyright-text"> 2025 Marc Griese</p>
                             </div>
                         </div>
                     </div>
