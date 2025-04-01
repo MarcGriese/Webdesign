@@ -74,7 +74,7 @@ const ContactDE = forwardRef((props, ref) => {
     };
 
     return (
-        <section className="contact">
+        <section className="contact" ref={ref}>
             <p className="contact__header">
                 WAS JETZT?
             </p>

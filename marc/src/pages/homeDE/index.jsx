@@ -196,6 +196,8 @@ export default function HomeDE() {
             {/* Recent Projects */}
             <Recent_ProjectsDE ref={feedbackRef}/>
 
+            <div className="placeholder"></div>
+
             {/* Customer feedback */}
             {/* <div className="customer-feedback__container row" ref={feedbackRef}>
                 <div className="customer-feedback-content_container row">

@@ -195,6 +195,8 @@ export default function HomeEN() {
             
             {/* Recent Projects */}
             <Recent_Projects ref={feedbackRef}/>
+            
+            <div className="placeholder"></div>
 
             {/* Customer feedback
             <div className="customer-feedback__container row" ref={feedbackRef}>

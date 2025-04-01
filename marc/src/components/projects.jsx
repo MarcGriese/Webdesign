@@ -1,31 +1,34 @@
 import React, { forwardRef } from "react";
 import PP_logo from "../assets/pictures/PennyPlanner_logo.png"
 
-const Recent_Projects = forwardRef((props, ref) => (
-    <div className="recent-project__container row" ref={ref}>
-        <div className="recent-project-left__container col-6">
-            <div className="recent-project-header__container">
-                <h2>Recent <br className="responsive-break" /> Projects &nbsp;
-                    <span style={{ color: '#8D21E6' }}>
-                        +
-                    </span>
+const Recent_Projects = forwardRef((props, ref) => {
 
-                </h2>
-            </div>
-            <div className="recent-project-left-content__container">
-                <img src={PP_logo} alt="" />
-            </div>
-        </div>
-        <div className="recent-project-right__container col-6">
-            <div className="recent-project-content__container">
+    return (
 
+        <section className="projects" ref={ref}>
+            <div className="projects__content row">
+                <div className="projects__left col-6">
+                    <h2 className="projects__header">
+                        Recent <br className="responsive-break" />  Projects &nbsp;
+                        <span style={{ color: '#8D21E6' }}>
+                            +
+                        </span>
+                    </h2>
+                    <div className="projects__customer">
+                        <img src={PP_logo} alt="Customer Logo" className="projects__customer-logo" />
+                    </div>
+                </div>
+                <div className="projects__right col-6">
+                    <div className="projects__customer">
+                        <img src={PP_logo} alt="Customer Logo" className="projects__customer-logo" />
+                    </div>
+                    <div className="projects__customer">
+                        <img src={PP_logo} alt="Customer Logo" className="projects__customer-logo" />
+                    </div>
+                </div>
             </div>
-            <div className="recent-project-content__container">
-
-            </div>
-        </div>
-
-    </div>
-))
+        </section>
+    )
+})
 
 export default Recent_Projects;
