@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 // Components
 import HeaderDE from "../../components/headerDE";
@@ -196,7 +196,7 @@ export default function HomeDE() {
             <Recent_ProjectsDE ref={feedbackRef}/>
 
             {/* Customer feedback */}
-            {/* <div className="customer-feedback__container row" ref={feedbackRef}>
+            <div className="customer-feedback__container row" ref={feedbackRef}>
                 <div className="customer-feedback-content_container row">
                     <div className="left-customer-feedback-content__container col-6">
                         <div className="feedback-content-wrap">
@@ -221,17 +221,17 @@ export default function HomeDE() {
                                     “Marc is one of best designers I have worked with in my entire life. He is a designer and developer who is very capable of taking up complex projects and delivers impeccable design.”
                                 </p>
                                 <p className="feedback-customer-name">
-                                    Bananenbieger187
+                                    Doris Hofmann
                                 </p>
                                 <p className="feedback-customer-company">
-                                    CEO, Baumwollfeld
+                                    Kanutours-Meissenheim
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </div> */}
+            </div>
 
             {/* <div className="placeholder"></div>
 

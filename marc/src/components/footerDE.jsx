@@ -53,7 +53,11 @@ export default function FooterDE() {
                         </div>
                     </div>
                 </div>
-                <div className="lower-footer__container" />
+                <div className="lower-footer__container">
+                    <p>AGBs</p>
+                    <p>Datenschutzerklärung</p>
+                    <p>Impressum</p>
+                </div>
             </div>
     )
 }
