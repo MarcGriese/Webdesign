@@ -42,9 +42,9 @@ const MenuComponent = ({ scrollToSkillset, scrollToFeedback, scrollToFooter }) =
             <div className="menu-welcome-component__container col-4" onClick={() => handleClick('About Me')} style={{ backgroundColor: lastClicked === 'About Me' ? '#5221E6' : 'transparent' }}>
                 <h3>About Me</h3>
             </div>
-            {/* <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Work')} style={{ backgroundColor: lastClicked === 'Work' ? '#5221E6' : 'transparent' }}>
+            <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Work')} style={{ backgroundColor: lastClicked === 'Work' ? '#5221E6' : 'transparent' }}>
                 <h3>Work</h3>
-            </div> */}
+            </div>
             <div className="menu-welcome-component__container col-4" onClick={() => handleClick('Contact')} style={{ backgroundColor: lastClicked === 'Contact' ? '#5221E6' : 'transparent' }}>
                 <h3>Contact</h3>
             </div>
@@ -111,12 +111,12 @@ function WelcomeComponent({ scrollToSkillset, scrollToFeedback, scrollToFooter }
                             >
                                 About Me
                             </div>
-                            {/* <div
+                            <div
                                 className={`menu-item ${selectedItem === 'work' ? 'selected' : ''}`}
                                 onClick={() => handleMenuItemClick('work')}
                             >
                                 Work
-                            </div> */}
+                            </div>
                             <div
                                 className={`menu-item ${selectedItem === 'contact' ? 'selected' : ''}`}
                                 onClick={() => handleMenuItemClick('contact')}
@@ -195,6 +195,8 @@ export default function HomeEN() {
             
             {/* Recent Projects */}
             <Recent_Projects ref={feedbackRef}/>
+            
+            <div className="placeholder"></div>
 
             {/* Customer feedback
             <div className="customer-feedback__container row" ref={feedbackRef}>
@@ -222,10 +224,10 @@ export default function HomeEN() {
                                     “Marc is one of best designers I have worked with in my entire life. He is a designer and developer who is very capable of taking up complex projects and delivers impeccable design.”
                                 </p>
                                 <p className="feedback-customer-name">
-                                    Bananenbieger187
+                                    Max Mustermann
                                 </p>
                                 <p className="feedback-customer-company">
-                                    CEO, Baumwollfeld
+                                    CEO, Musterfirma
                                 </p>
                             </div>
                         </div>
