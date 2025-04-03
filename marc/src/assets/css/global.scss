@@ -1,11 +1,22 @@
 body {
     font-family: "Ubuntu";
-    
+
     margin: 0;
     // background-color: #023934;
 
     .center-text {
         text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    li,
+    a{
+        hyphens: auto;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 }
 
