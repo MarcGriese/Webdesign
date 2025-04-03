@@ -1,18 +1,31 @@
 .impressum {
+    padding: 5% 0 5% 0;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: black;
-    height: 70vh;
 }
 
 .impressum__content {
-
+    padding: 0 10% 0 10%;
+    display: flex;
+    max-width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .impressum__header {
-
+    color: #8D21E6;
 }
 
 .impressum__text {
 
+}
+
+.impressum__list {
+    color: white;
 }
 
 .impressum__section {
@@ -20,5 +33,5 @@
 }
 
 .impressum__header-sub {
-
+    color: #8D21E6;
 }

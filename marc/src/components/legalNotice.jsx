@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ImpressumDE() {
+export default function LegalNotice() {
     return (
         <section className="impressum" style={{ wordBreak: "break-word", hyphens: "auto" }}>
             <div className="impressum__content">
