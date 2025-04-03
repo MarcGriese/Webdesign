@@ -8,14 +8,13 @@ import Skillset_ComponentDE from "../../components/skillsetDE";
 import Recent_ProjectsDE from "../../components/projectsDE";
 import ContactDE from "../../components/contactDE";
 import FooterDE from "../../components/footerDE"
+import FeedbackDE from "../../components/feedbackDE";
 
 // Images
 import MarcIMG from "../../assets/pictures/welcome-pic-small.png"
 import LogoMG from "../../assets/pictures/logo-mg-white.png"
 import MenuIcon from "../../assets/pictures/menu-icon.png"
 import welcomepic from "../../assets/pictures/welcome-pic-DE.png"
-
-import FeedbackIMG from "../../assets/pictures/feedback-img.png"
 
 const MenuComponent = ({ scrollToSkillset, scrollToFeedback, scrollToFooter }) => {
     const [lastClicked, setLastClicked] = useState('About Me'); // Default to 'About Me' as initially clicked
@@ -199,44 +198,9 @@ export default function HomeDE() {
             <div className="placeholder"></div>
 
             {/* Customer feedback */}
-            <div className="customer-feedback__container row" ref={feedbackRef}>
-                <div className="customer-feedback-content_container row">
-                    <div className="left-customer-feedback-content__container col-6">
-                        <div className="feedback-content-wrap">
-                            <h1 className="feedback-header-text">
-                                Was meine Kunden über mich sagen:
-                            </h1>
-                            <p className="feedback-content-text">
-                                Hier sind ein paar Eindrücke von Personen, mit denen ich zuletzt zusammengearbeitet habe.
-                            </p>
-                            <h3 className="feedback-testimonials-link">
-                                Alle Berichte ansehen
-                            </h3>
-                        </div>
-                    </div>
-                    <div className="right-customer-feedback-content__container col-6">
-                        <div className="feedback-content-wrap">
-                            <div className="feedback-img__container">
-                                <img src={FeedbackIMG} alt="sample image" />
-                            </div>
-                            <div className="feedback-text_container">
-                                <p className="feedback-customer-text">
-                                    “Marc is one of best designers I have worked with in my entire life. He is a designer and developer who is very capable of taking up complex projects and delivers impeccable design.”
-                                </p>
-                                <p className="feedback-customer-name">
-                                    Max Mustermann
-                                </p>
-                                <p className="feedback-customer-company">
-                                    CEO, Musterfirma
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <FeedbackDE/>
 
-            </div>
-
-            {/* <div className="placeholder"></div>
+            <div className="placeholder"></div>
 
             {/* contact */}
             <ContactDE ref={contactRef}/>

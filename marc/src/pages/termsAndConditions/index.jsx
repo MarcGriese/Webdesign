@@ -1,14 +1,14 @@
 import React from "react";
 import Header2 from "../../components/header2";
-import ImpressumDE from "../../components/impressum";
-import FooterDE from "../../components/footerDE";
+import TermsAndConditions from "../../components/termsAndConditions";
+import Footer from "../../components/footer";
 
 export default function Impressum() {
     return (
         <>
             <Header2 />
-            <ImpressumDE/>
-            <FooterDE/>
+            <TermsAndConditions/>
+            <Footer/>
         </>
 
     )
