@@ -1,0 +1,37 @@
+.agb {
+    padding: 5% 0 5% 0;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+}
+
+.agb__content {
+    padding: 0 10% 0 10%;
+    display: flex;
+    max-width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.agb__header {
+    color: #8D21E6;
+}
+
+.agb__text {
+
+}
+
+.agb__list {
+    color: white;
+}
+
+.agb__section {
+
+}
+
+.agb__header-sub {
+    color: #8D21E6;
+}
