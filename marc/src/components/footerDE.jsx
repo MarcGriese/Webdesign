@@ -54,9 +54,9 @@ export default function FooterDE() {
                     </div>
                 </div>
                 <div className="lower-footer__container">
-                    <p>AGBs</p>
-                    <p>Datenschutzerklärung</p>
-                    <p>Impressum</p>
+                    <Link to="/agb">AGBs</Link>
+                    <Link to="/datenschutz">Datenschutzerklärung</Link>
+                    <Link to="/impressum">Impressum</Link>
                 </div>
             </div>
     )
