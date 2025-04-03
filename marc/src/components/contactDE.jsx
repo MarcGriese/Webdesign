@@ -1,9 +1,4 @@
 import React, { useState, forwardRef } from "react";
-import MailIcon from "../assets/pictures/mail-icon.png"
-
-
-
-
 
 const ContactDE = forwardRef((props, ref) => {
 
@@ -17,7 +12,9 @@ const ContactDE = forwardRef((props, ref) => {
         email: '',
         message: '',
     });
+
     const [statusMessage, setStatusMessage] = useState(null);
+    const [isChecked, setIsChecked] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,6 +30,9 @@ const ContactDE = forwardRef((props, ref) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let validationErrors = {};
+        if (!isChecked) {
+            validationErrors.check = 'Bitte bestätigen Sie die Zustimmung zur Datenverarbeitung.';
+        }
         if (formData.name.trim() === '') {
             validationErrors.name = 'Bitte geben Sie Ihren Namen ein.';
         }
@@ -64,6 +64,7 @@ const ContactDE = forwardRef((props, ref) => {
                     console.log('Erfolg:', data);
                     // Weitere Aktionen nach erfolgreicher Übermittlung
                     setFormData({ name: '', email: '', message: '' });  // Felder leeren
+                    setIsChecked(false);
                     setStatusMessage({ type: 'success', text: 'Vielen Dank für Ihre Nachricht!' });
                 })
                 .catch((error) => {
@@ -139,6 +140,16 @@ const ContactDE = forwardRef((props, ref) => {
                         className={errors.message ? 'error' : ''}
                         required
                     />
+
+                    <label style={{marginBottom: "1rem"}} className="checkbox-label">
+                        <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={(e) => setIsChecked(e.target.checked)}
+                            required
+                        />
+                        <span>Ich stimme der Verarbeitung meiner Daten zu</span>
+                    </label>
 
                     <button type="submit">Senden</button>
                 </form>

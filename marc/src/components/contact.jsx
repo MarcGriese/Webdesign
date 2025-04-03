@@ -13,6 +13,7 @@ const Contact = forwardRef((props, ref) => {
         message: '',
     });
     const [statusMessage, setStatusMessage] = useState(null);
+    const [isChecked, setIsChecked] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -28,6 +29,9 @@ const Contact = forwardRef((props, ref) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let validationErrors = {};
+        if (!isChecked) {
+            validationErrors.check = 'Please confirm your consent to data processing.';
+        }
         if (formData.name.trim() === '') {
             validationErrors.name = 'Please enter your name.';
         }
@@ -59,6 +63,7 @@ const Contact = forwardRef((props, ref) => {
                     console.log('Erfolg:', data);
                     // Weitere Aktionen nach erfolgreicher Übermittlung
                     setFormData({ name: '', email: '', message: '' });  // Felder leeren
+                    setIsChecked(false);
                     setStatusMessage({ type: 'success', text: 'Thank you for your message!' });
                 })
                 .catch((error) => {
@@ -134,6 +139,16 @@ const Contact = forwardRef((props, ref) => {
                         className={errors.message ? 'error' : ''}
                         required
                     />
+
+                    <label style={{ marginBottom: "1rem" }} className="checkbox-label">
+                        <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={(e) => setIsChecked(e.target.checked)}
+                            required
+                        />
+                        <span>I consent to the processing of my data.</span>
+                    </label>
 
                     <button type="submit">Send</button>
                 </form>
