@@ -201,7 +201,7 @@ export default function HomeEN() {
 
             {/* Customer feedback */}
 
-            <FeedbackEN/>
+            {/* <FeedbackEN/> */}
             
 
             <div className="placeholder"></div>

@@ -198,7 +198,7 @@ export default function HomeDE() {
             <div className="placeholder"></div>
 
             {/* Customer feedback */}
-            <FeedbackDE/>
+            {/* <FeedbackDE/> */}
 
             <div className="placeholder"></div>
 
